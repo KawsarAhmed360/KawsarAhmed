@@ -1,0 +1,74 @@
+<!-- Save as neon-floating-notes.svg -->
+<svg viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <rect width="100%" height="100%" fill="#080a0f"/>
+
+  <defs>
+    <linearGradient id="neon" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#6a7bff"/>
+      <stop offset="100%" stop-color="#c26bff"/>
+    </linearGradient>
+
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+
+    <!-- music note shape as a symbol -->
+    <g id="note">
+      <path d="M24 4c-1.1 0-2 .9-2 2v34.2c-1.3-.7-2.8-1.1-4.4-1.1-5 0-9 4-9 9s4 9 9 9 9-4 9-9V19h11c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H24z" transform="scale(1.8)" fill="url(#neon)"/>
+    </g>
+  </defs>
+
+  <!-- background faint grid lines -->
+  <g stroke="rgba(255,255,255,0.02)" stroke-width="1">
+    <line x1="0" y1="50" x2="1200" y2="50"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="190" x2="1200" y2="190"/>
+    <line x1="0" y1="260" x2="1200" y2="260"/>
+  </g>
+
+  <!-- animated notes (multiple clones with different timing & paths) -->
+  <g filter="url(#blur1)">
+    <use href="#note" x="80"  y="240" opacity="0.95">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -180" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="6s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#note" x="310" y="260" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -220" dur="7.2s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="7.2s" begin="0.8s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#note" x="560" y="230" opacity="0.9">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -200" dur="5.6s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" dur="5.6s" begin="1.5s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#note" x="800" y="260" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="0 0; -20 -240" dur="8s" begin="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="8s" begin="0.4s" repeatCount="indefinite"/>
+    </use>
+
+    <use href="#note" x="1020" y="250" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="0 0; 10 -210" dur="6.6s" begin="0.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="6.6s" begin="0.2s" repeatCount="indefinite"/>
+    </use>
+  </g>
+
+  <!-- thin neon spark lines (horizontal animated streak) -->
+  <g stroke="url(#neon)" stroke-width="2" stroke-linecap="round" opacity="0.12">
+    <line x1="60" y1="320" x2="340" y2="320">
+      <animate attributeName="x1" values="60;160" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="340;640" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="420" y1="300" x2="820" y2="300">
+      <animate attributeName="x1" values="420;520" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="820;1220" dur="4s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- caption -->
+  <text x="50" y="40" fill="#9adcff" font-family="Segoe UI, Roboto, Arial" font-size="18" opacity="0.9">
+    <tspan>Neon Notes — aesthetic music particles</tspan>
+  </text>
+</svg>
