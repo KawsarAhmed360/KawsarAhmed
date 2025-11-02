@@ -70,7 +70,7 @@
 ## 🐍 Snake Animation
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KawsarAhmed360/KawsarAhmed360/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+ <img src="https://github.com/KawsarAhmed360/KawsarAhmed360/blob/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </p>
 
 ---
