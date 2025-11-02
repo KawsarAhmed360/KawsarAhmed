@@ -1,7 +1,7 @@
 <!-- 🌌 Advanced GitHub Profile README for Kawsar Ahmed -->
 
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00F7FF&center=true&vCenter=true&width=435&lines=Hi+there!+👋;I'm+Kawsar+Ahmed;CSE+Student+at+University+of+Chittagong;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00F7FF&center=true&vCenter=true&width=435&lines=Hi+there!+👋;I'm+Kawsar+Ahmed;Student+of+Chittagong+University;Depertment+of+CSE;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
 </h1>
 
 <p align="center">
