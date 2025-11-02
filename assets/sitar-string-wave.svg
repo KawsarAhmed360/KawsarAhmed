@@ -1,0 +1,71 @@
+<!-- Save as sitar-string-wave.svg -->
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="100%" height="100%" fill="#0b0f14"/>
+  <!-- gradient for string glow -->
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#5b7bff"/>
+      <stop offset="100%" stop-color="#8a43ff"/>
+    </linearGradient>
+
+    <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- a gentle ripple path used as template -->
+    <path id="wave-template" d="M0,150 C150,130 300,170 450,150 C600,130 750,170 900,150 C1050,130 1200,150 1350,150" />
+  </defs>
+
+  <!-- strings -->
+  <g stroke-linecap="round" stroke-width="2" stroke="rgba(255,255,255,0.06)">
+    <line x1="50" y1="90" x2="1150" y2="90"/>
+    <line x1="50" y1="150" x2="1150" y2="150"/>
+    <line x1="50" y1="210" x2="1150" y2="210"/>
+  </g>
+
+  <!-- animated ripples (multiple copies of the wave-template with staggered animations) -->
+  <g transform="translate(-75,0)" stroke="url(#g1)" fill="none" stroke-width="3" filter="url(#f1)">
+    <use href="#wave-template" opacity="0.0">
+      <animate attributeName="opacity" values="0;0.9;0" dur="2.4s" repeatCount="indefinite" begin="0s"/>
+      <animateTransform attributeName="transform" type="translate" from="-200 0" to="0 0" dur="2.4s" repeatCount="indefinite" begin="0s"/>
+    </use>
+
+    <use href="#wave-template" opacity="0.0">
+      <animate attributeName="opacity" values="0;0.7;0" dur="2.8s" repeatCount="indefinite" begin="0.65s"/>
+      <animateTransform attributeName="transform" type="translate" from="-240 0" to="0 0" dur="2.8s" repeatCount="indefinite" begin="0.65s"/>
+    </use>
+
+    <use href="#wave-template" opacity="0.0">
+      <animate attributeName="opacity" values="0;0.5;0" dur="3.2s" repeatCount="indefinite" begin="1.2s"/>
+      <animateTransform attributeName="transform" type="translate" from="-280 0" to="0 0" dur="3.2s" repeatCount="indefinite" begin="1.2s"/>
+    </use>
+  </g>
+
+  <!-- pluck indicator (a small glowing circle that moves on the middle string) -->
+  <g>
+    <circle cx="240" cy="150" r="10" fill="#00ffff" opacity="0.95" filter="url(#f1)">
+      <animate attributeName="cx" values="240;520;240" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="10;18;10" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.4;0.9" dur="4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- small particle sparks near the pluck -->
+    <g>
+      <circle cx="240" cy="150" r="2" fill="#8a43ff" opacity="0.9">
+        <animate attributeName="cx" values="240;320" dur="1.2s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="150;120" dur="1.2s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0" dur="1.2s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="240" cy="150" r="2" fill="#00f0ff" opacity="0.9">
+        <animate attributeName="cx" values="240;200" dur="1.6s" begin="0.3s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="150;180" dur="1.6s" begin="0.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.9;0" dur="1.6s" begin="0.3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- subtle glow line on top for aesthetic -->
+  <path d="M40,40 L1160,40" stroke="rgba(0,240,255,0.04)" stroke-width="60" stroke-linecap="round" />
+</svg>
