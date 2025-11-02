@@ -49,10 +49,24 @@
 ---
 
 ## 🎵 Now Playing on Spotify
+<p align="center" style="margin-top:18px;">
+  <img src="./neon-floating-notes.svg" width="70%" />
+</p>
+
+
+---
+
+## ⚡️ sitar string wave
 <p align="center">
-  <a href="https://open.spotify.com/user/31bqsyo6x6s3k3xyyfzlt6rtd7tq">
-    <img src="https://spotify-github-profile.vercel.app/api/view?uid=31bqsyo6x6s3k3xyyfzlt6rtd7tq&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=true" alt="Spotify Now Playing" />
-  </a>
+  <img src="./sitar-string-wave.svg" width="80%" />
+</p>
+
+---
+
+## 🌍 Visitor Count
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=KawsarAhmed360&style=for-the-badge&color=blueviolet">
 </p>
 
 ---
@@ -63,22 +77,6 @@
   <a href="mailto:kawsar.cse.cu@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
   <a href="https://github.com/KawsarAhmed360"><img src="https://img.shields.io/badge/GitHub-171515?style=for-the-badge&logo=github&logoColor=white"></a>
   <a href="#"><img src="https://img.shields.io/badge/Portfolio-0A66C2?style=for-the-badge&logo=react&logoColor=white"></a>
-</p>
-
----
-
-## 🐍 Snake Animation
-
-<p align="center">
- <img src="https://github.com/KawsarAhmed360/KawsarAhmed360/blob/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
-</p>
-
----
-
-## 🌍 Visitor Count
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=KawsarAhmed360&style=for-the-badge&color=blueviolet">
 </p>
 
 ---
